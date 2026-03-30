@@ -58,8 +58,8 @@
   --suntop-font: "DM Sans", sans-serif;
   --suntop-gray: #3C3C3C;
   --suntop-gray-rgb: 60, 60, 60;
-  --suntop-base: #F95E11;
-  --suntop-base-rgb: 249, 94, 17;
+  --suntop-base: #E51B1B;
+  --suntop-base-rgb: 229, 27, 27;
   --suntop-black: #111111;
   --suntop-black-rgb: 17, 17, 17;
   --suntop-white: #ffffff;
@@ -942,7 +942,7 @@ xs sidebar
   background: transparent;
   position: fixed;
   bottom: 60px;
-  right: -12px;
+  left: -12px;
   z-index: 99;
   text-align: center;
   opacity: 0;
@@ -2447,9 +2447,40 @@ Sec Title Css
   .main-header-one {
     padding: 10px 0px 10px !important;
   }
+
+  .main-header-one__bottom {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
 }
 
+/* 5 products per row on xl screens */
+@media (min-width: 1200px) {
+    .highlight-one .row > [class*="col-xl"] {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
 
+/* Reduce product image size */
+.highlight-one__single-img img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 15px;
+  right: 22px;
+  z-index: 999;
+}
+
+.whatsapp-logo {
+  max-width: 60px;
+}
 
 /*--------------------------------------------------------------
 # End All Css
